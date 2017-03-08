@@ -1,0 +1,39 @@
+function geraPagina(score) {
+    var code = "<!DOCTYPE html>" +
+                "<html>" +
+                    "<head>" +
+                        "<meta charset='utf-8' />" +
+                        "<style>" +
+                            ".canvas {" +
+                                "border: 1px solid #000;" +
+                                "position: absolute;" +
+                                "width: 600px;" +
+                                "height: 600px;" +
+                                "top: 0px;" +
+                                "right: 0px;" +
+                                "bottom: 0px;" +
+                                "left: 0px;" +
+                                "margin: auto;" +
+                            "}" +
+                            ".resultados {" +
+                                "width: 350px;" +
+                                "height: 300px;" +
+                                "padding-top: 90px;" +
+                                "padding-left: 100px;" +
+                            "}" +
+                            "h2{padding-left: 100px;padding-top: 50px;}" +
+                        "</style>" +
+                    "</head>" +
+                    "<body>" +
+                        "<div class='canvas'>" +
+                            "<h2>Ranking Total: " + score + "</h2>" +
+                            "<div class='results'>" +
+                                "<h3>Top 5 scores:</h3>";
+    
+    var i;
+    for (i = 0; i < 5; i += 1) {
+        code += (i + 1) + "º - " + values[i] + "<br>";
+    }
+    code += "</div></div></body></html>";
+    return code;
+}
